@@ -14,14 +14,14 @@ def binary(a):
 	while len(res)!=8:
 		res = "0"+res
 	return res
-	
+
 def toInts(text):
 	'''
 	@input: text: type(text) = string
 	@output: list of the ASCII number of each character of text
 	'''
 	return [ord(letter) for letter in text]
-	
+
 def toBytes(intList):
 	'''
 	@intput: intList: type(intList) = list of integers
@@ -33,14 +33,14 @@ def toBytes(intList):
 		if len(hexa)==1: hexa = '0'+hexa
 		res = res + hexa
 	return res
-	
+
 def toChar(intList):
 	'''
 	@intput: intList: type(intList) = list of integers
 	@output: list of characters corresponding to the integers it got as inputs (using ASCII)
 	'''
 	return [chr(integer) for integer in intList]
-	
+
 def toStr(charList):
 	'''
 	charList should be a list of characters
@@ -50,9 +50,9 @@ def toStr(charList):
 	for letter in charList:
 		res = res+letter
 	return res
-	
+
 ## ENCRYPT/DECRYPT FUNCTIONS
-	
+
 def xor(a, b):
 	'''
 	@signature: int xor(int a, int b) - all in base 10
@@ -85,7 +85,7 @@ def schedule(key):
 
 def cipher(inputText, S):
 	'''
-	encrypts plainText with S, using the RC4 algorithm 
+	encrypts plainText with S, using the RC4 algorithm
 	'''
 	inputInts = toInts(inputText)
 	i=0; j=0
@@ -102,11 +102,8 @@ def genKey(l=16):
 	'''
 	generates a random key of length l bytes (16 by default)
 	'''
-	key=[]
-	for i in range(l):
-		key.append(rd.randint(0, 255))
-	return key
-	
+	return [rd.randint(0,255) for i in range(l)]
+
 ## TEST SCRIPT
 
 if __name__ == "__main__":
@@ -117,7 +114,7 @@ if __name__ == "__main__":
 	# get plainText
 	try:
 		plainText = sys.argv[1]
-	except: 
+	except:
 		print("[ERROR] missing argument! Please add a message (and your key if you have one) to encrypt.\nExample: ./rc4-cipher.py Hello! secretKey")
 		exit()
 	# get secret key
