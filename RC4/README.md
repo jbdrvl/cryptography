@@ -1,21 +1,6 @@
 # RC4 Algorithm
 This Python script is meant to present the basic RC4 algorithm, which is/was used in WEP, WPA, TLS/SSL (now prohibited), and [more](https://en.wikipedia.org/wiki/RC4#RC4-based_protocols).
 
-    Copyright (C) 2018 Jean-Baptiste DURVILLE
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 ## THEORY
 RC4 is a **stream cipher**: it encrypts/decrypts all bytes one at a time.<br/>
 To do so, it generates a **pseudo-random keystream** with the help of a secret key, and uses it to encrypt the plainText with a binary XOR, byte after byte.<br/>
@@ -59,3 +44,20 @@ Result after decrypting: My message
 * [Secure Communications course](http://www.eurecom.fr/en/course/SecCom-2017Fall) by [Refik MOLVA](http://www.eurecom.fr/en/people/molva-refik) from [EURECOM](http://www.eurecom.fr/en/eurecom/strategy)
 * [GitHub user g2jun](https://github.com/g2jun/RC4-Python)
 * [Wikipedia](https://en.wikipedia.org/wiki/RC4)
+
+## License
+
+    Copyright (C) 2018 Jean-Baptiste DURVILLE
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
