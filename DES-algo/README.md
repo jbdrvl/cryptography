@@ -25,7 +25,7 @@ Finally, there is a permutation to re-arrange the output of the *S-boxes*.<br/>
 The script is divided into five sections:
 1. The data section where all of the **permutation and substitution tables** are stored.
 2. The main functions:
-	* ```des()```: takes as input a plain text divides it into 64-bit blocks, to then pass them to *desBlock()*.
+	* ```des()```: takes as input a plain text, divides it into 64-bit blocks, to then passes them to *desBlock()*.
 	* ```desBlock()```: sub-function of *des()*, which is used to encrypt/decrypt a given block with a given key (this function can however be used independently).
 	* ```f()```: the Fiestel function used in each round of the Fiestel cipher, specific to DES.
 3. The secondary functions: mainly those in charge of the permutations and substitutions.
