@@ -9,14 +9,14 @@ DES is a **symetric-key block cipher**.<br/>
 * Even though only one key is used for an entire message, the subkeys are re-computed for each block. To be more efficient, we could decide to compute the subkeys only once and send them along with each block.
 
 ## THEORY
-The DES algorithm is built on top of a **[Fiestel structure](https://github.com/jbdrvl/cryptography/tree/master/feistel-cipher)**, with a very specific *f* function (Fiestel function) to be used in each round:<br/>
+The DES algorithm is built on top of a **[Feistell structure](https://github.com/jbdrvl/cryptography/tree/master/feistel-cipher)**, with a very specific *f* function (Feistel function) to be used in each round:<br/>
 <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/DES-main-network.png/250px-DES-main-network.png"/><p><i>from Wikipedia</i></p></div>
 
-### Fiestel Function for DES
-Below is a representation of the Fiestel Function for DES (*from Wikipedia*):<br/>
+### Feistel Function for DES
+Below is a representation of the Feistel Function for DES (*from Wikipedia*):<br/>
 <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Data_Encription_Standard_Flow_Diagram.svg/250px-Data_Encription_Standard_Flow_Diagram.svg.png"/></div>
 
-This Fiestel function uses **subkeys** that are derived from the original key using a **key schedule** algorithm, which uses *rotations* to generate subkeys from the main key.<br/>
+This Feistel function uses **subkeys** that are derived from the original key using a **key schedule** algorithm, which uses *rotations* to generate subkeys from the main key.<br/>
 The first step is to expand the input into a 48-bit block to be able to *xor* it with the subkey: this is the **expansion** phase.<br/>
 Then the (*block xor subkey*) block is passed through the **substitution** boxes, where the script uses pre-defined *S-boxes* to compute the output out of the input.<br/>
 Finally, there is a permutation to re-arrange the output of the *S-boxes*.<br/>
@@ -27,7 +27,7 @@ The script is divided into five sections:
 2. The main functions:
 	* ```des()```: takes as input a plain text, divides it into 64-bit blocks, to then passes them to *desBlock()*.
 	* ```desBlock()```: sub-function of *des()*, which is used to encrypt/decrypt a given block with a given key (this function can however be used independently).
-	* ```f()```: the Fiestel function used in each round of the Fiestel cipher, specific to DES.
+	* ```f()```: the Feistel function used in each round of the Feistel cipher, specific to DES.
 3. The secondary functions: mainly those in charge of the permutations and substitutions.
 4. Utils: sub-functions used by the main and secondary functions.
 5. Driver: gets the input from the terminal, generates a key, encrypts the message then tries to decrypt. Prints out the different variables.

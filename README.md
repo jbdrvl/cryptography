@@ -9,7 +9,7 @@ I will add the algorithms as I code them.
 
 ## Diffie-Hellman Key Exchange
 
-## Fiestel Cipher
+## Feistel Cipher
 Block cipher used in other algorithms such as DES.
 
 ## RC4

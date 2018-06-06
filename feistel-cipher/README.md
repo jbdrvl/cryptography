@@ -1,5 +1,5 @@
-# FIESTEL CIPHER
-The Fiestel Cipher is a block cipher, and represents the main building block of other algorithms such as DES. <br/>
+# FEISTEL CIPHER
+The Feistel Cipher is a block cipher, and represents the main building block of other algorithms such as DES. <br/>
 
 ## THEORY
 

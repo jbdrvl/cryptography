@@ -2,7 +2,7 @@
 #!/usr/bin/env python3
 
 #######################################################################
-# 
+#
 # Copyright (C) 2018 Jean-Baptiste DURVILLE
 #
 # This program is free software: you can redistribute it and/or modify
@@ -16,9 +16,9 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-####################################################################### 
+#######################################################################
 
 import random as rd
 import sys
@@ -55,7 +55,7 @@ def keyGen(l,n):
             k = k + str(rd.randint(0,1))
         o.append(k)
     return o
-    
+
 def binToHex(binary):
 	res="0x"
 	hexList = [hex(int(binary[i:i+8], 2))[2:] for i in range(0, len(binary),8)]
@@ -69,7 +69,7 @@ if __name__ == "__main__":
 	# getting plain text and converting it to binary
 	try:
 		plainText = sys.argv[1]
-	except: 
+	except:
 		plainText = "Hello World!"
 	plainInts = [bin(ord(letter))[2:] for letter in plainText]
 	plainBin=""
