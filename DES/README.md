@@ -9,7 +9,7 @@ DES is a **symetric-key block cipher**.<br/>
 * Even though only one key is used for an entire message, the subkeys are re-computed for each block. To be more efficient, we could decide to compute the subkeys only once and send them along with each block.
 
 ## THEORY
-The DES algorithm is built on top of a **[Feistell structure](https://github.com/jbdrvl/cryptography/tree/master/feistel-cipher)**, with a very specific *f* function (Feistel function) to be used in each round:<br/>
+The DES algorithm is built on top of a **[Feistel structure](https://github.com/jbdrvl/cryptography/tree/master/feistel-cipher)**, with a very specific *f* function (Feistel function) to be used in each round:<br/>
 <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/DES-main-network.png/250px-DES-main-network.png"/><p><i>from Wikipedia</i></p></div>
 
 ### Feistel Function for DES
