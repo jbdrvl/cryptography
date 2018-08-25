@@ -3,14 +3,17 @@ The Diffie-Hellman Key Exchange Algorithm is designed for two parties (Alice and
 It can be used to agree on a common secret key over an insecure channel.
 
 ## THEORY
-Alice first chooses a prime number *p*, then *x* a primitive element of *p* (*x* in *Zp*).
-*p* and *x* are public.<br/>
-Alice then chooses her private integer *a*: 0<*a*<*p*-2.<br/>
-Bob, who wishes to communicate with Alice, chooses its own private integer *b*: 0<*b*<*p*-2.<br/>
-Bob sends Alice *x^b mod p*, and Alice sends Bob *x^a mod p*.<br/>
-Alice can then compute *(x^a)^b mod p* and Bob, *(x^b)^a mod p*.<br/>
-The private key *Kab* shared by Alice and Bob is *x^(ab) mod p*.<br/>
-![Diffie-Hellman Key Exchange Chart]()
+* Alice first chooses a prime number *p*, then *x* a primitive element of *p* (*x* in *Zp*).
+*p* and *x* are public.
+* Alice then chooses her private integer *a*: 0<*a*<*p*-2.
+* Bob, who wishes to communicate with Alice, chooses its own private integer *b*: 0<*b*<*p*-2.
+* Bob sends Alice *x^b mod p*, and Alice sends Bob *x^a mod p*.
+* Alice can then compute *(x^a)^b mod p* and Bob, *(x^b)^a mod p*.
+
+The private key *Kab* shared by Alice and Bob is *x^(ab) mod p*.
+
+<!--![Diffie-Hellman Key Exchange Chart]()-->
+
 The security of the exchange comes from the fact that it is computationally very hard to deduce *a* from *x^a mod p*, even if *x* and *p* are known.
 
 ## CODING
